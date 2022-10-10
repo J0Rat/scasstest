@@ -1,0 +1,29 @@
+$pink: linear-gradient(black, purple);
+$green: green;
+$red: red;
+
+$theme: lightblue;
+
+@mixin theme($theme: lightblue)
+{
+    color: #fff;
+    background: $theme;
+    box-shadow: 0 10px 10px rgba($theme, .7);
+}
+
+
+
+
+
+body
+{
+    background-image: $pink;
+    h1
+    {
+        @include theme;
+    }
+    h2
+    {
+        @include theme($theme: $green);
+    }
+}
